@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="J:/Jprojects/CalifornicationSauseProjectSelenide">
+        <classes>
+            <class name="test.AllGoodsPageTest">
+                <methods>
+                    <include name="bikeLightHeaderTextTest"/>
+                    <include name="backPackHeaderTextTest"/>
+                    <include name="boltTshirtHeaderTextTest"/>
+                    <include name="fleeceJacketHeaderTextTest"/>
+                    <include name="whiteShirtHeaderTextTest"/>
+                    <include name="hoodyHeaderTextTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
