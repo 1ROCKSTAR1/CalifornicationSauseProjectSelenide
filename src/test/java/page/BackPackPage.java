@@ -1,6 +1,6 @@
 package page;
 
-import Base.BasicModel;
+import base.BasePage;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
@@ -9,19 +9,17 @@ import static com.codeborne.selenide.Selenide.page;
 
 public class BackPackPage extends BasePage {
 
-    // Локаторы заменены на SelenideElement
-    private final SelenideElement addBackPackToCart = $("button[data-test='add-to-cart']");
-    private final SelenideElement backPackCartIcon = $("a.shopping_cart_link");
-    private final SelenideElement backPackItem = $("div.inventory_details_name"); // Пример, уточните локатор
-    private final SelenideElement backPackDesc = $("div.inventory_details_desc.large_size");
-    private final SelenideElement addToCartButton = $("button[data-test='add-to-cart']");
+    private SelenideElement addBackPackToCart = $("button[data-test='add-to-cart']");
+    private SelenideElement backPackCartIcon = $("a.shopping_cart_link");
+    private SelenideElement backPackItem = $("div.inventory_details_name"); // Пример, уточните локатор
+    private SelenideElement backPackDesc = $("div.inventory_details_desc.large_size");
+    private SelenideElement addToCartButton = $("button[data-test='add-to-cart']");
 
-    // Конструктор теперь пустой, так как Selenide управляет драйвером самостоятельно
     public BackPackPage() {
     }
 
     public String getBackPackItem() {
-        return backPackItem.getText(); // Автоматическое ожидание элемента
+        return backPackItem.getText();
     }
 
     public String getBackPackDesc() {
@@ -37,8 +35,6 @@ public class BackPackPage extends BasePage {
     @Step("Go to the cart with BackPack")
     public YourCartPage clickBackPackCartIcon() {
         backPackCartIcon.click();
-        return page(YourCartPage.class); // Selenide сам инициализирует страницу
+        return page(YourCartPage.class);
     }
-
-    // Удалены явные ожидания - Selenide делает это автоматически
 }
