@@ -4,16 +4,15 @@ import base.BasePage;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.page;
+import static com.codeborne.selenide.Selenide.*;
 
 public class BackPackPage extends BasePage {
 
-    private SelenideElement addBackPackToCart = $("button[data-test='add-to-cart']");
-    private SelenideElement backPackCartIcon = $("a.shopping_cart_link");
-    private SelenideElement backPackItem = $("div.inventory_details_name"); // Пример, уточните локатор
-    private SelenideElement backPackDesc = $("div.inventory_details_desc.large_size");
-    private SelenideElement addToCartButton = $("button[data-test='add-to-cart']");
+    private SelenideElement addBackPackToCart = $x("//button[@data-test='add-to-cart']");
+    private SelenideElement backPackCartIcon = $x("//a[@class='shopping_cart_link']");
+    private SelenideElement backPackItem = $x("Copy string literal text to the clipboard");
+    private SelenideElement backPackDesc = $x("//div[contains(@class,'inventory_details_desc large_size')][contains(text(),'uncompromising')]");
+    private SelenideElement addToCartButton = $x("//button[@data-test='add-to-cart']");
 
     public BackPackPage() {
     }
