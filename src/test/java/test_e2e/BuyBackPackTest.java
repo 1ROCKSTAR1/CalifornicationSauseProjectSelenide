@@ -6,8 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import page.AutorizationPage;
 
-import static com.codeborne.selenide.Selenide.page;
-
 public class BuyBackPackTest extends BaseTest {
 
     @Epic(value = "E2E tests")
@@ -17,7 +15,7 @@ public class BuyBackPackTest extends BaseTest {
     @Test(priority = 1, description = "Checking of creating an order. CHAINS")
     public void buyBackPack3() {
 
-        String finishBuyHeader = page(AutorizationPage.class)
+        String finishBuyHeader = new AutorizationPage()
                 .inputLogin()
                 .inputPassword()
                 .clickSubmit()

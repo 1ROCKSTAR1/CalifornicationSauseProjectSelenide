@@ -52,6 +52,6 @@ public class BuyInformationPage extends BasePage {
     @Step("Submit order information")
     public OverviewPage clickOnsumbitButton() {
         submitButton.click();
-        return page(OverviewPage.class);
+        return new OverviewPage();
     }
 }

@@ -34,6 +34,6 @@ public class BackPackPage extends BasePage {
     @Step("Go to the cart with BackPack")
     public YourCartPage clickBackPackCartIcon() {
         backPackCartIcon.click();
-        return page(YourCartPage.class);
+        return new YourCartPage();
     }
 }

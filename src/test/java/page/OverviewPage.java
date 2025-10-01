@@ -42,6 +42,6 @@ public class OverviewPage extends BasePage {
     @Step("Complete order")
     public CompletePage finishButtonClick() {
         finishButton.click();
-        return page(CompletePage.class);
+        return new CompletePage();
     }
 }

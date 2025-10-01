@@ -51,7 +51,7 @@ public class GoodsPage extends BasePage {
     @Step("Go to the Hoody's page")
     public HoodyPage clickOnHoody() {
         hoodyItem.click();
-        return page(HoodyPage.class);
+        return new HoodyPage();
     }
 
     // Геттеры для текстов элементов
