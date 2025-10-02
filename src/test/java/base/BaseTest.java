@@ -28,15 +28,7 @@ public abstract class BaseTest {
         Configuration.savePageSource = false;
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-features=PasswordLeakDetection");
-        options.addArguments("--disable-password-manager-reauthentication");
-        options.addArguments("--disable-password-check");
-        options.addArguments("--disable-background-timer-throttling");
-        options.addArguments("--disable-popup-blocking");
-        options.addArguments("--password-store=basic");
-        options.addArguments("--disable-save-password-bubble");
-        options.addArguments("--disable-autofill-keyboard-accessory-view");
-        options.addArguments("--disable-features=PasswordLeakDetection");
+        options.addArguments("--incognito");
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
