@@ -23,13 +23,13 @@ public class OverviewPage extends BasePage {
 
     @Step("Verify payment information")
     public OverviewPage checkPaymentInfo() {
-        paymentInfo.shouldHave(text("Payment Information"));
+        paymentInfo.shouldHave(text("Payment Information:"));
         return this;
     }
 
     @Step("Verify shipping information")
     public OverviewPage checkShipInfo() {
-        shipInfo.shouldHave(text("Shipping Information"));
+        shipInfo.shouldHave(text("Shipping Information:"));
         return this;
     }
 

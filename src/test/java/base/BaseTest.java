@@ -29,6 +29,7 @@ public abstract class BaseTest {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
+        Configuration.browserCapabilities = options;
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
                 .screenshots(true)
